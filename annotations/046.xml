@@ -1,0 +1,26 @@
+<annotation>
+	<folder>image</folder>
+	<filename>046.png</filename>
+	<path>D:\project3\kitchen_data\image\046.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>542</width>
+		<height>427</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>head</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>243</xmin>
+			<ymin>156</ymin>
+			<xmax>294</xmax>
+			<ymax>206</ymax>
+		</bndbox>
+	</object>
+</annotation>
