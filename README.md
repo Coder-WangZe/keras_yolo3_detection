@@ -9,6 +9,6 @@ data augmentation
 
 1 运行data_augs.py,得到增强后的数据image和xml文件 xml文件输出在目录data_augmentation\annotations\下 然后将原始的xml文件复制在该目录下。
 
-2 运行data_annotations.py 该脚本中的class要包括标注时添加的所有种类如“hat”，“nohat” 运行得到train_list和test_list的txt文件
+2 运行data_annotations.py 该脚本中的class要包括标注时添加的所有种类名称（str）运行得到train_list和test_list的txt文件
 
 3 运行train.py训练
