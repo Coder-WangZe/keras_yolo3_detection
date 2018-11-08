@@ -36,8 +36,8 @@ def detect_image(yolo, input_image, output_image_dir, show_img=False):
 
 start = timer()
 yolo = YOLO()
-all_image_dir = 'D:\\project3\\chef_hats\\raw_image_data\\train_image\\'
-output_image_dir = "D:\\project3\\chef_hats\\output_image\\train_output\\"
+all_image_dir = 'D:\\project3\\chef_hats\\raw_image_data\\all_image\\'
+output_image_dir = "D:\\project3\\chef_hats\\output_image\\output\\"
 image_list = os.listdir(all_image_dir)
 image_dirs = [all_image_dir + image for image in image_list]
 for image_dir in image_dirs:

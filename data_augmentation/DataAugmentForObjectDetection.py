@@ -53,10 +53,10 @@ def show_pic(img, bboxes=None):
 
 # 图像均为cv2读取
 class DataAugmentForObjectDetection():
-    def __init__(self, rotation_rate=0.5, max_rotation_angle=5, 
-                crop_rate=0.5, shift_rate=0.5, change_light_rate=0.5,
-                add_noise_rate=0.5, flip_rate=0.5, 
-                cutout_rate=0.5, cut_out_length=50, cut_out_holes=1, cut_out_threshold=0.5):
+    def __init__(self, rotation_rate=0.5, max_rotation_angle=5,
+                 crop_rate=0.5, shift_rate=0.5, change_light_rate=0.5,
+                 add_noise_rate=0.5, flip_rate=0.5,
+                 cutout_rate=0.5, cut_out_length=50, cut_out_holes=1, cut_out_threshold=0.5):
         self.rotation_rate = rotation_rate
         self.max_rotation_angle = max_rotation_angle
         self.crop_rate = crop_rate
@@ -87,7 +87,7 @@ class DataAugmentForObjectDetection():
     # 调整亮度
     def _changeLight(self, img):
         # random.seed(int(time.time()))
-        flag = random.uniform(0.5, 1.5) #flag>1为调暗,小于1为调亮
+        flag = random.uniform(0.5, 1.5)  # flag>1为调暗,小于1为调亮
         return exposure.adjust_gamma(img, flag)
     
     # cutout

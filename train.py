@@ -17,7 +17,7 @@ from yolo3.utils import get_random_data
 def _main():
     annotation_path = 'train_list.txt'
     log_dir = 'logs/000/'
-    classes_path = 'model_data/head_classes.txt'
+    classes_path = 'model_data/hat_classes.txt'
     anchors_path = 'model_data/yolo_anchors.txt'
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
@@ -80,7 +80,7 @@ def _main():
                             steps_per_epoch=max(1, num_train//batch_size),
                             validation_data=data_generator_wrapper(lines[num_train:], batch_size, input_shape, anchors, num_classes),
                             validation_steps=max(1, num_val//batch_size),
-                            epochs=200,
+                            epochs=300,
                             initial_epoch=50,
                             callbacks=[logging, checkpoint, reduce_lr, early_stopping])
         model.save_weights(log_dir + 'trained_weights_fina3.h5')
@@ -139,7 +139,7 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
 def create_tiny_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
                       weights_path='model_data/tiny_yolo_weights.h5'):
     '''create the training model, for Tiny YOLOv3'''
-    K.clear_session()  # get a new session
+    K.clear_session() # get a new session
     image_input = Input(shape=(None, None, 3))
     h, w = input_shape
     num_anchors = len(anchors)
@@ -168,7 +168,7 @@ def create_tiny_model(input_shape, anchors, num_classes, load_pretrained=True, f
 
 
 def data_generator(annotation_lines, batch_size, input_shape, anchors, num_classes):
-    """data generator for fit_generator"""
+    '''data generator for fit_generator'''
     n = len(annotation_lines)
     i = 0
     while True:
