@@ -1,6 +1,9 @@
 Object detection with yolov3 in keras.
 
-include： labeling; data augmentation; training and testing with images and video.
+Include： 
+ labeling; 
+ data augmentation; 
+ training and testing with images and video.
 
 一 Data augmentation for object detection：
 
