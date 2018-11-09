@@ -5,11 +5,12 @@ Include：
  data augmentation; 
  training and testing with images and video.
 
-一 LabelImg software的使用：
+一 LabelImg software的使用： 
+    (需要下载gui包pyQt）
 
     首先，源码文件夹中使用notepad++打开data/predefined_classes.txt，修改默认类别，比如改成person、car、motorcycle三个类别。
 
-    打开cmd 切换到labelImg_software/目录下，运行python labelImg.py 打开主界面
+    打开cmd 切换到labelImg_software/目录下，pyrcc4 -o resources.py resources.qrc，再python labelImg.py 打开主界面
 
     “Open Dir”打开图片文件夹，选择第一张图片开始进行标注，键盘“W”开始画框，单击结束画框，再双击选择类别。完成一张图片后点击“Save”保存，
 
