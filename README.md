@@ -17,6 +17,8 @@ Include：
     此时XML文件已经保存到本地了。点击“Next Image”转到下一张图片。
 
     xml文件与pascal voc所用xml格式一致。
+    
+    - reference：https://blog.csdn.net/jesse_mx/article/details/53606897
    
 
 
